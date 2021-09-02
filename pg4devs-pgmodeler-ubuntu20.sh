@@ -48,17 +48,13 @@ cd pgmodeler/
 git checkout master
 git pull
 
-# Prepare
-./linuxdeploy.sh 
-
 # Dirs Prefix
 sudo mkdir /opt/pgModeler
 sudo chown ${USER}:root /opt/pgModeler
 
-# Compilation
+# Prepare and Compilation
 /usr/bin/qmake -r -spec linux-g++ CONFIG+=release PREFIX=/opt/pgModeler BINDIR=/opt/pgModeler PRIVATEBINDIR=/opt/pgModeler PRIVATELIBDIR=/opt/pgModeler/lib LANGDIR=/opt/pgModeler/lang SAMPLESDIR=/opt/pgModeler/samples SCHEMASDIR=/opt/pgModeler/schemas PLUGINSDIR=/opt/pgModeler/plugins CONFDIR=/opt/pgModeler/conf DOCDIR=/opt/pgModeler SHAREDIR=/opt/pgModeler TEMPDIR=/opt/pgModeler/tmp pgmodeler.pro
 make && make install
-
 
 # Run and enjoy
 ls -l /opt/pgModeler/
