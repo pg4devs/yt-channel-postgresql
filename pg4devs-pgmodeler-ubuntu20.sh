@@ -41,7 +41,6 @@ cd temp
 
 # code git
 git clone https://github.com/pgmodeler/pgmodeler.git
-git checkout master
 
 # checkout
 cd pgmodeler/
