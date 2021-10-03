@@ -1,11 +1,12 @@
 #!/bin/bash
-
-# Produce: pg4devs.com
+#
+# Install pgModeler Ubuntu 20.04 LTS
+#
+# Productor: pg4devs.com
 # Author: Emanuel A Carneiro
+# email contact: emanuel.ac.pro@gmail.com
+# Instagram: @emanuel.ac.pro @pg4devs @iroot.tech
 
-#-
-#- Install PostgreSQL 13 - Ubuntu 20.04 LTS
-#-
 
 # Env globals Variables
 export PG_VERSION='13'
