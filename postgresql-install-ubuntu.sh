@@ -1,8 +1,10 @@
 #!/bin/bash
-# PostgreSQL install
-# Ubuntu Dist
+#
+# Install PostgreSQL Ubuntu XX
+#
+# Productor: pg4devs.com
 # Author: Emanuel A Carneiro
-# email contact: emanuel.ac.pro@gmail.com
+# email: emanuel.ac.pro@gmail.com
 # Instagram: @emanuel.ac.pro @pg4devs @iroot.tech
 
 # Choice version
@@ -23,10 +25,14 @@ apt-get -y install postgresql-${PG_VERSION} postgresql-server-dev-${PG_VERSION} 
 # Restart process
 systemctl restart postgresql@${PG_VERSION}-main
 
-# Ajust listan_address
+# Ajust listen_address
 cat << EOF > /etc/postgresql/${PG_VERSION}/main/conf.d/listen.conf
 listen_addresses = '*'
 EOF
 chown postgres:postgres /etc/postgresql/${PG_VERSION}/main/conf.d/listen.conf
 
+# Restart
 systemctl restart postgresql@${PG_VERSION}-main
+
+# Enable auto start
+systemctl enable postgresql@${PG_VERSION}-main
